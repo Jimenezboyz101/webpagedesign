@@ -1,46 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Page Title</title>
-
-    <!-- Including the main.css file for styling -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>History — Acoustic Guitars</title>
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Including the Font Awesome CSS library for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-
 <body>
-
-    <!-- Navigation bar -->
     <div class="topnav" id="myTopnav">
-        <!-- Links to different sections -->
-        <a href="index.html">Abstract</a>
-
-        <!-- Active link pointing to the section1.html page -->
-        <a class="active" href="section1.html">Section 1</a>
-
-        <a href="section2.html">Section 2</a>
-        <a href="section3.html">Section 3</a>
-        <a href="see_also.html">See Also</a>
-        <a href="references.html">References</a>
-
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
-        <a href="javascript:void(0);" class="icon">
-            <i class="fa fa-bars"></i>
-        </a>
+        <a class="brand" href="index.html">Acoustic Guitars</a>
+        <a href="index.html" class="navlink">Home</a>
+        <a href="section1.html" class="navlink active">History</a>
+        <a href="section2.html" class="navlink">Variations</a>
+        <a href="section3.html" class="navlink">Playstyles / Team</a>
+        <a href="see_also.html" class="navlink">See Also</a>
+        <a href="references.html" class="navlink">References</a>
+        <a href="javascript:void(0);" class="icon" id="navToggle2"><i class="fa fa-bars"></i></a>
     </div>
 
-    <!-- Page content -->
-    <div class="content">
-        <!-- Section 1 content -->
-        This is section 1.
-    </div>
+    <main class="content">
+        <article class="wiki-article watch-section">
+            <h1>A Brief History</h1>
+            <p>The acoustic guitar has roots that date back thousands of years, to its ancestors like the oud and lute. These early instruments used strings made of dried animal guts and featured rounded backs. The modern acoustic guitar's shape was refined in Spain in the late 18th century. Luthiers improved size and bracing to increase resonance and volume. The steel-string acoustic (with six steel strings) emerged later for even louder projection. The twelve-string produces a shimmering chorus because of paired courses. Classical guitars are built primarily for fingerstyle and concert playing.</p>
 
-    <!-- Including the main.js file for JavaScript functionality -->
+            <h2>Timeline abr.</h2>
+            <ul class="timeline">
+                <li><strong>Ancient times:</strong> lute-family instruments appear in the Middle East and Europe.</li>
+                <li><strong>Late 18th c.:</strong> Spanish luthiers refine design towards modern shapes.</li>
+                <li><strong>Early 19th c.:</strong> Classical guitar standards form (Torres).</li>
+                <li><strong>20th c.:</strong> Steel-string acoustics, twelve-strings, and modern amplification.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <small><a href="index.html">Back to Home</a></small>
+    </footer>
+
     <script src="js/main.js"></script>
-
 </body>
-
 </html>

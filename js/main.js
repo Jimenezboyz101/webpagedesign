@@ -1,20 +1,31 @@
-// Get the element with the class "icon"
-let icon = document.getElementsByClassName("icon")[0];
+// Main JS for navigation toggle, active link highlighting
 
-// Add an event listener for the 'click' event on the icon element
-icon.addEventListener('click', responsive_control);
+(function(){
+    // NAV TOGGLE: when hamburger clicked, toggle responsive mode
+    function setupNavToggle(id){
+        const btn = document.getElementById(id);
+        if(!btn) return;
+        btn.addEventListener('click', function(){
+            const nav = btn.closest('.topnav');
+            nav.classList.toggle('responsive');
+        });
+    }
+    // support multiple nav toggles on different pages
+    ['navToggle','navToggle2','navToggle3','navToggle4','navToggle5','navToggle6'].forEach(setupNavToggle);
 
-// Function to control the responsiveness of the navigation bar
-function responsive_control() {
-  // Get the element with the id "myTopnav"
-  let x = document.getElementById("myTopnav");
-
-  // Check if the class name of the element is "topnav"
-  if (x.className === "topnav") {
-    // If it is, add the "responsive" class to the element
-    x.className += " responsive";
-  } else {
-    // If it's not, remove the "responsive" class from the element
-    x.className = "topnav";
-  }
-}
+    // Active link highlighting based on current URL
+    (function highlightActive(){
+        const links = document.querySelectorAll('.topnav a.navlink');
+        const path = window.location.pathname.split("/").pop() || 'index.html';
+        links.forEach(a=>{
+            try {
+                const href = a.getAttribute('href');
+                if(href && href.split('/').pop() === path) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            } catch(e){}
+        });
+    })();
+})();

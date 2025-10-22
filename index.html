@@ -1,58 +1,71 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>GEOG 328 LAB 02 EXAMPLE</title>
-
-    <!-- Including the main.css file for styling -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Acoustic Guitars — Home</title>
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Including the Font Awesome CSS library for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-
 <body>
-
     <!-- Navigation bar -->
     <div class="topnav" id="myTopnav">
-        <!-- Active link pointing to the index.html page -->
-        <a class="active" href="index.html">Abstract</a>
-
-        <!-- Links to other sections -->
-        <a href="section1.html">Section 1</a>
-        <a href="section2.html">Section 2</a>
-        <a href="section3.html">Section 3</a>
-
-        <!-- Additional links -->
-        <a href="see_also.html">See Also</a>
-        <a href="references.html">References</a>
-
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
-        <a href="javascript:void(0);" class="icon">
-            <i class="fa fa-bars"></i>
-        </a>
+        <a class="brand" href="index.html">Acoustic Guitars</a>
+        <a href="index.html" class="navlink">Home</a>
+        <a href="section1.html" class="navlink">History</a>
+        <a href="section2.html" class="navlink">Variations</a>
+        <a href="section3.html" class="navlink">Playstyles / Team</a>
+        <a href="see_also.html" class="navlink">See Also</a>
+        <a href="references.html" class="navlink">References</a>
+        <a href="javascript:void(0);" class="icon" id="navToggle"><i class="fa fa-bars"></i></a>
     </div>
 
-    <!-- Page content -->
-    <div class="content">
-        <!-- Abstract section -->
-        This is the abstract section.
-        <br>
-        <br>
-        <!-- Displaying the course cover image in a scaled size -->
-        Here is the course cover image in a scaled size:
-        <br>
-        <img src="img/cover.jpg" style="width: 100%; height: auto;">
-        <br>
-        <br>
-        <!-- Displaying the course cover image in its original size -->
-        Here is the course cover image in its original size:
-        <img src="img/cover.jpg">
-    </div>
+    <!-- Fullscreen video background -->
+    <header class="hero">
+        <video autoplay muted loop playsinline class="bgvideo" id="bgVideo">
+            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+            <!-- Fallback image -->
+        </video>
+        <div class="hero-overlay">
+            <h1>Acoustic Guitars</h1>
+            <p class="tagline">A brief look into the history, variations, and popular playing styles.</p>
+            <a href="section1.html" class="cta">Explore the History</a>
+        </div>
+    </header>
 
-    <!-- Including the main.js file for JavaScript functionality -->
+    <main class="content">
+        <section class="watch-section" id="abstract">
+            <h2>Abstract</h2>
+            <p>This is a brief look into the history of acoustic guitars — including the earliest iteration of the instruments, some of my personal favorite acoustic guitar variations, and the playing styles that were popularized with each iteration.</p>
+            <figure class="cover-figure">
+                <img src="https://ampedstudio.com/wp-content/uploads/2022/07/best-acoustic-guitar.jpg" alt="Acoustic guitars" />
+                <figcaption>Acoustic guitars — different shapes and tones.</figcaption>
+            </figure>
+        </section>
+
+        <section class="watch-section" id="history-snippet">
+            <h2>A Brief History</h2>
+            <p>The acoustic guitar has roots that date back thousands of years to ancestors like the oud and lute. Modern acoustic guitars began taking shape in Spain in the late 18th century, and the standard six steel strings appeared later to provide greater volume.</p>
+            <a href="section1.html" class="more-link">Read more →</a>
+        </section>
+
+        <section class="watch-section" id="variations-snippet">
+            <h2>Variations</h2>
+            <p>Notable variations include the classical guitar (nylon strings, wider neck) and the twelve-string guitar (pairs of strings producing a chorus-like sound).</p>
+            <a href="section2.html" class="more-link">See the comparison table →</a>
+        </section>
+
+        <section class="watch-section" id="playstyles-snippet">
+            <h2>Playstyles</h2>
+            <p>From fingerstyle and flamenco to plectrum-based strumming — playing styles evolved with the instruments and genres.</p>
+            <a href="section3.html" class="more-link">Learn about playstyles & meet the contributors →</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <small>Created by Jimenezboyz101 • <a href="references.html">References</a></small>
+    </footer>
+
     <script src="js/main.js"></script>
-
 </body>
-
 </html>
